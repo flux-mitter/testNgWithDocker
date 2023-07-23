@@ -23,7 +23,7 @@ public class ValidationEpic1 extends BaseTest {
 
 	
 	@FrameworkAnnotations(author = { "Preetam" }, executionType = { ExecutionType.REGRESSION, ExecutionType.SMOKE })
-	@Test(priority = 1,enabled=false)
+	//@Test(priority = 1,enabled=false)
 	@Epic(value = "TV001")
 	@Description("Testing Link Broken")
 	@Story("verify main page links")
@@ -33,7 +33,7 @@ public class ValidationEpic1 extends BaseTest {
 		homePage.selectSubcategory("Broken");
 	}
 	
-	@Test(priority = 2,enabled=false)
+	//@Test(priority = 2,enabled=false)
 	@Epic(value = "TV001")
 	@Description("Testing Link Checkboxes")
 	@Story("verify main page links")

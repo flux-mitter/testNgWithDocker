@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 14 16:39:28 IST 2023</td>
+<td>Started on:</td><td>Sun Jul 23 18:40:50 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>176 seconds (176694 ms)</td>
+<tr><td>Total time:</td><td>18 seconds (18299 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,33 +76,21 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.tests.ClearTripHomePageTestCases.validateOfferesIsSelected()'><b>validateOfferesIsSelected</b><br>Test class: com.tests.ClearTripHomePageTestCases</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a/div[text()=&apos;Offers&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.198, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/rr/7z5fwp150rs...}, goog:chromeOptions: {debuggerAddress: localhost:53412}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53412/devtoo..., se:cdpVersion: 114.0.5735.198, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba10b948d04cea174ddaef39f53f69ec
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.pages.BasePage.explicitWait(BasePage.java:50)
-	at com.pages.BasePage.click(BasePage.java:28)
-	at com.pages.HomePage.selectSubcategory(HomePage.java:44)
-	at com.tests.ClearTripHomePageTestCases.validateOfferesIsSelected(ClearTripHomePageTestCases.java:20)
+<td title='com.tests.ValidationEpic1.validateOfferesIsSelected2()'><b>validateOfferesIsSelected2</b><br>Test class: com.tests.ValidationEpic1</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.pages.HomePage.negative(HomePage.java:57)
+	at com.tests.ValidationEpic1.validateOfferesIsSelected2(ValidationEpic1.java:53)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1656303750", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1656303750'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a/div[text()=&apos;Offers&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.198, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/rr/7z5fwp150rs...}, goog:chromeOptions: {debuggerAddress: localhost:53412}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53412/devtoo..., se:cdpVersion: 114.0.5735.198, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba10b948d04cea174ddaef39f53f69ec
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.pages.BasePage.explicitWait(BasePage.java:50)
-	at com.pages.BasePage.click(BasePage.java:28)
-	at com.pages.HomePage.selectSubcategory(HomePage.java:44)
-	at com.tests.ClearTripHomePageTestCases.validateOfferesIsSelected(ClearTripHomePageTestCases.java:20)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace376067673", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace376067673'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.pages.HomePage.negative(HomePage.java:57)
+	at com.tests.ValidationEpic1.validateOfferesIsSelected2(ValidationEpic1.java:53)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,22 +120,8 @@ Session ID: ba10b948d04cea174ddaef39f53f69ec
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>30</td>
-<td>com.tests.ClearTripHomePageTestCases@60db1c0e</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.tests.ClearTripHomePageTestCases.validateHotelIsSelected()'><b>validateHotelIsSelected</b><br>Test class: com.tests.ClearTripHomePageTestCases</td>
-<td></td>
-<td>80</td>
-<td>com.tests.ClearTripHomePageTestCases@60db1c0e</td></tr>
+<td>0</td>
+<td>com.tests.ValidationEpic1@5f7da3d3</td></tr>
 </table><p>
 </body>
 </html>

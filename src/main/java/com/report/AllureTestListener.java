@@ -158,15 +158,49 @@ public class AllureTestListener extends TestListenerAdapter{
 //        return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
 //    }
 	
-	@Attachment(value="{0}", type = "text/plain")
-	public static String saveTextLog(String message)
-	{
-		return message;
-	}
 	
-	@Attachment(value = "Page screenshot", type = "image/png")
-  public byte[] captureScreenshot(WebDriver d) {
-      return ((TakesScreenshot) d).getScreenshotAs(OutputType.BYTES);
-  }
+	
+//	@Attachment(value="{0}", type = "text/plain")
+//	public static String saveTextLog(String message)
+//	{
+//		return message;
+//	}
+//	
+//	@Attachment(value = "Page screenshot", type = "image/png")
+//  public byte[] captureScreenshot(WebDriver d) {
+//      return ((TakesScreenshot) d).getScreenshotAs(OutputType.BYTES);
+//  }
+//	
+//	@Override
+//	public void onTestFailure(ITestResult iTestResult) {
+//		System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
+////		Object testClass = iTestResult.getInstance();
+//		WebDriver driver = DriverManager.getDriver();
+//		// Allure ScreenShot and SaveTestLog
+//		if (driver instanceof WebDriver) {
+//			System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
+//			captureScreenshot(driver);
+//		}
+//		saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");	
+//	}
+	@Override
+	public void onTestFailure(ITestResult iTestResult) {
+		System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
+//		Object testClass = iTestResult.getInstance();
+		WebDriver driver = DriverManager.getDriver();
+		// Allure ScreenShot and SaveTestLog
+		if (driver instanceof WebDriver) {
+			System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
+			//captureScreenshot(driver);
+			 byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			 attachScreenshot(screenshot);
+		}
+		//saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");	
+	}
+	@Attachment(value = "Screenshot", type = "image/png")
+    public byte[] attachScreenshot(byte[] screenshot) {
+        return screenshot;
+    }
+
 	
 }

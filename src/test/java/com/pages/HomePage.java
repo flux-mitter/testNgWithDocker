@@ -33,7 +33,7 @@ public class HomePage extends BasePage
 	{
 		return By.xpath("//button/span[contains(text(),'Get OTP')]/../../../../..//div[contains(@style,'border-radius: 14px;')]");
 	}
-	@Step("Sub category clicked")
+	//@Step("Sub category clicked")
 	public By selectSubSategory(String subCategory)
 	{
 //		return By.xpath("//a/div[text()='"+subCategory+"']");
@@ -44,7 +44,7 @@ public class HomePage extends BasePage
 	{
 		click(close(),Wait.CLICKABLE);
 	}
-	@Step("Sub category clicked")
+	@Step("Sub category clicked {0}")
 	public void selectSubcategory(String subCategory)
 	{
 		click(selectSubSategory(subCategory), Wait.CLICKABLE);

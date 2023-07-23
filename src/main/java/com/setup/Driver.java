@@ -18,16 +18,28 @@ public class Driver {
 	private static WebDriver driver;
 	
 	public static WebDriver getDriver(String browser,String version) {
+//		System.out.println("driver " + driver);
 		if (Objects.isNull(driver))
 		{
 			driver = createDriver(browser,version);
 		}
+			
+//		else if(driver.toString().contains("null"))
+//		{
+//		
+//			driver = createDriver(browser,version);
+//		}
+//		System.out.println("driver2 " + driver);
 //		else
 //		{
 //			
 //		}
 		
 		return driver;
+	}
+	public static void setDriverNull()
+	{
+		driver=null;
 	}
 	
 	public static WebDriver createDriver(String browser,String version)
@@ -45,7 +57,7 @@ public class Driver {
 //			chromePrefs.put("download.prompt_for_download", false);
 //			chromePrefs.put("download.default_directory", downloadFilepath);
 			ChromeOptions options = new ChromeOptions();
-			options.setBrowserVersion("114.0.5735.198");
+//			options.setBrowserVersion("114.0.5735.198");
 			options.addArguments("--remote-allow-origins=*");
 //			options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities cap = new DesiredCapabilities();

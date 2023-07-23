@@ -39,6 +39,10 @@ public class BasePage {
 	}
 
 	// Wait
+	// Read Text
+	protected boolean isDisplayed(By by, Wait wait) {
+			return explicitWait(by,wait).isDisplayed();
+		}
 	
 
 	protected WebElement explicitWait(By by, Wait wait) {

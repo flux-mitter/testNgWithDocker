@@ -1,6 +1,9 @@
 package com.tests;
 
+import java.io.IOException;
+
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -28,4 +31,13 @@ public class BaseTest {
 	protected void tearDown() {
 		DriverManager.quitDriver();
 	}
+	
+//	@AfterSuite
+//	public void displayOutput() throws IOException
+//	{
+//		Runtime runtime = Runtime.getRuntime();
+//		String cmd = "allure serve "+"\""+System.getProperty("user.dir")+"/allure-results"+"\"";
+//		System.out.println(cmd);
+//		Process process = runtime.exec(cmd);
+//	}
 }

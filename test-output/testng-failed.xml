@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.tests.ClearTripHomePageTestCases">
+      <class name="com.tests.ValidationEpic1">
         <methods>
           <include name="tearDown"/>
-          <include name="validateOfferesIsSelected"/>
+          <include name="validateOfferesIsSelected2"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.tests.ClearTripHomePageTestCases -->
+      </class> <!-- com.tests.ValidationEpic1 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

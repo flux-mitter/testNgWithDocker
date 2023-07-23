@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,24 +103,10 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.tests.ClearTripHomePageTestCases" class="method navigator-link" hash-for-method="validateOfferesIsSelected">validateOfferesIsSelected</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.tests.ValidationEpic1" class="method navigator-link" hash-for-method="validateOfferesIsSelected2">validateOfferesIsSelected2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.tests.ClearTripHomePageTestCases" class="method navigator-link" hash-for-method="validateHotelIsSelected">validateHotelIsSelected</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -135,26 +121,20 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.tests.ClearTripHomePageTestCases</span>
+              <span class="class-name">com.tests.ValidationEpic1</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateOfferesIsSelected">
-                  </a> <!-- validateOfferesIsSelected -->
-                  <span class="method-name">validateOfferesIsSelected</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a/div[text()=&apos;Offers&apos;] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.198, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /var/folders/rr/7z5fwp150rs...}, goog:chromeOptions: {debuggerAddress: localhost:53412}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53412/devtoo..., se:cdpVersion: 114.0.5735.198, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba10b948d04cea174ddaef39f53f69ec
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.pages.BasePage.explicitWait(BasePage.java:50)
-	at com.pages.BasePage.click(BasePage.java:28)
-	at com.pages.HomePage.selectSubcategory(HomePage.java:44)
-	at com.tests.ClearTripHomePageTestCases.validateOfferesIsSelected(ClearTripHomePageTestCases.java:20)
+                  <a name="validateOfferesIsSelected2">
+                  </a> <!-- validateOfferesIsSelected2 -->
+                  <span class="method-name">validateOfferesIsSelected2</span>
+                  <div class="stack-trace">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.pages.HomePage.negative(HomePage.java:57)
+	at com.tests.ValidationEpic1.validateOfferesIsSelected2(ValidationEpic1.java:53)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -162,25 +142,10 @@ Session ID: ba10b948d04cea174ddaef39f53f69ec
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.tests.ClearTripHomePageTestCases</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validateHotelIsSelected">
-                  </a> <!-- validateHotelIsSelected -->
-                  <span class="method-name">validateHotelIsSelected</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/preetammitra/Desktop/Learn EveryDay/Automation Workspaces/All in 1 Workspace/clearTrip_Automation/testng.xml</span>
+            <span class="header-content">/Users/preetammitra/Desktop/Learn EveryDay/Automation Workspaces/All in 1 Workspace/testngUpdated/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -189,7 +154,7 @@ Session ID: ba10b948d04cea174ddaef39f53f69ec
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.tests.ClearTripHomePageTestCases&quot;/&gt;
+      &lt;class name=&quot;com.tests.ValidationEpic1&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -229,20 +194,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateHotelIsSelected')
-data.setCell(0, 2, 'com.tests.ClearTripHomePageTestCases')
-data.setCell(0, 3, 80599);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateOfferesIsSelected')
-data.setCell(1, 2, 'com.tests.ClearTripHomePageTestCases')
-data.setCell(1, 3, 30527);
+data.setCell(0, 1, 'validateOfferesIsSelected2')
+data.setCell(0, 2, 'com.tests.ValidationEpic1')
+data.setCell(0, 3, 372);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 372 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -257,9 +218,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.tests.ValidationEpic1</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">validateHotelIsSelected</span>
+                <br/>
+                <span class="ignored-method-name">validateOfferesIsSelected</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -268,32 +238,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.tests.ClearTripHomePageTestCases</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.tests.ValidationEpic1</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validateHotelIsSelected</span>
-                <span class="method-start">65486 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">146099 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">146104 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validateOfferesIsSelected</span>
-                <span class="method-start">146109 ms</span>
+                <span class="method-name">validateOfferesIsSelected2</span>
+                <span class="method-start">16843 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">176650 ms</span>
+                <span class="method-start">17236 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

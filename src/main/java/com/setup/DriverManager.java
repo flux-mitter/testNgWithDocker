@@ -22,11 +22,12 @@ public class DriverManager {
 	
 	public static void quitDriver() {
 		//localDriver.remove();
-		if((Objects.isNull(localDriver.get())))
-		{
+//		if((Objects.isNull(localDriver.get())))
+//		{
 			getDriver().quit();
 			localDriver.remove();
-		}
+			Driver.setDriverNull();
+//		}
 	}
 	
 	

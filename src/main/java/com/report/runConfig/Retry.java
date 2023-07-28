@@ -14,15 +14,17 @@ import io.qameta.allure.Attachment;
 
 public class Retry implements IRetryAnalyzer {
 //	private int count = 0;
-//	private static int maxTry = Integer.parseInt(PropertiesUtils.get(ConfigEnum.MAXRETRY));
+
+	private static int maxTry = Integer.parseInt(PropertiesUtils.get(ConfigEnum.MAXRETRY));
 	private int count = 0;
-	private static int maxTry = 3;
+//	private static int maxTry = 1;
 	private static String getTestMethodName(ITestResult result)
 	{
 		return result.getMethod().getConstructorOrMethod().getName();
 	}
 	@Override
 	 public boolean retry(ITestResult iTestResult) {
+		System.out.println(PropertiesUtils.get(ConfigEnum.MAXRETRY));
         if (!iTestResult.isSuccess()) {                      //Check if test not succeed
             if (count < maxTry) {                            //Check if maxtry count is reached
                 count++;                                     //Increase the maxTry count by 1

@@ -9,13 +9,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 
 import com.config.PropertiesUtils;
 import com.enums.ConfigEnum;
 import com.pages.HomePage;
 import com.setup.DriverManager;
 
-
+@Listeners({com.report.runConfig.AllureTestListener.class})
 public class BaseTest {
 	
 	HomePage homePage;

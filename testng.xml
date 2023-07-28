@@ -4,6 +4,10 @@
 <!-- <listeners>
         <listener class-name="com.report.AllureTestListener"/>
 </listeners> -->
+<listeners>
+    <!--     <listener class-name="com.report.runConfig.AllureTestListener"/> -->
+       <listener class-name="com.report.runConfig.AnnotationTransformer"/> 
+    </listeners>
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.tests.ValidationEpic1"/>

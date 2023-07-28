@@ -1,4 +1,4 @@
-package com.report;
+package com.report.runConfig;
 
 import java.io.IOException;
 
@@ -10,14 +10,19 @@ import org.testng.IHookCallBack;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
+import org.testng.TestNG;
 
+import com.config.PropertiesUtils;
+import com.enums.ConfigEnum;
 import com.setup.DriverManager;
 import io.qameta.allure.Attachment;
 
 public class AllureTestListener extends TestListenerAdapter{
 	
 	
-	
+//	private int count = 0;
+//	private static int maxTry = 3;
+
 	private static String getTestMethodName(ITestResult result)
 	{
 		return result.getMethod().getConstructorOrMethod().getName();
@@ -195,12 +200,26 @@ public class AllureTestListener extends TestListenerAdapter{
 			 byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 			 attachScreenshot(screenshot);
 		}
-		//saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");	
+		saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");
+//		if (count < maxTry) {
+//	        count++;
+//	        TestNG tng = new TestNG();
+//	        tng.setDefaultTestName("RETRY TEST");
+//	        Class[] classes1 = { iTestResult.getTestClass().getRealClass() };
+//	        tng.setTestClasses(classes1);
+//	        tng.addListener(new TestListenerAdapter());
+//	        tng.run();
+//	    }
 	}
 	@Attachment(value = "Screenshot", type = "image/png")
     public byte[] attachScreenshot(byte[] screenshot) {
         return screenshot;
     }
+	@Attachment(value="{0}", type = "text/plain")
+	public static String saveTextLog(String message)
+	{
+		return message;
+	}
 
 	
 }

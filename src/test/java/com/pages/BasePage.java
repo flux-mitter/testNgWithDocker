@@ -6,6 +6,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,6 +25,7 @@ public class BasePage {
 //        wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10));
 //    }
 	// Click Method
+	
 	protected void click(By by,Wait wait) {
 		explicitWait(by,wait).click();
 	}

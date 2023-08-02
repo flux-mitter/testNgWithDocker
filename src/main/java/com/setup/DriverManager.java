@@ -4,7 +4,11 @@ import java.util.Objects;
 
 import org.openqa.selenium.WebDriver;
 
-public class DriverManager {
+public final class DriverManager {
+	
+	private DriverManager(){
+		
+	}
 	
 	
 	private static ThreadLocal<WebDriver> localDriver = new ThreadLocal<>();

@@ -13,7 +13,12 @@ import com.config.PropertiesUtils;
 import com.enums.ConfigEnum;
 
 
-public class Driver {
+public final class Driver {
+	
+	private Driver()
+	{
+		
+	}
 	
 	private static WebDriver driver;
 	

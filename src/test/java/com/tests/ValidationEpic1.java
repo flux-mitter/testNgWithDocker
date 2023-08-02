@@ -56,15 +56,15 @@ public class ValidationEpic1 extends BaseTest {
 		homePage.negative("Checkboxes2");
 	}
 	
-//	@FrameworkAnnotations(author = { "Preetam" }, executionType = { ExecutionType.REGRESSION, ExecutionType.SMOKE })
-//	@Test(priority = 4)
-//	@Epic(value = "TV001")
-//	@Description("Testing Link Broken")
-//	@Story("verify main page links")
-//	@Feature("Broken")
-//	@Severity(SeverityLevel.CRITICAL)
-//	public void validateHotelIsSelected2() {
-//		homePage.selectSubcategory("Broken");
-//	}
+	@FrameworkAnnotations(author = { "Preetam" }, executionType = { ExecutionType.REGRESSION, ExecutionType.SMOKE })
+	@Test(priority = 4)
+	@Epic(value = "TV001")
+	@Description("Testing Link Broken")
+	@Story("verify main page links")
+	@Feature("Broken")
+	@Severity(SeverityLevel.CRITICAL)
+	public void validateHotelIsSelected2() {
+		homePage.selectSubcategory("Broken");
+	}
 
 }

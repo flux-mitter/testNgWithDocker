@@ -60,23 +60,23 @@ public class AllureTestListener extends TestListenerAdapter{
 	
 	@Override
 	public void onStart(ITestContext iTestContext) {
-		System.out.println("I am in onStart method " + iTestContext.getName());
+//		System.out.println("I am in onStart method " + iTestContext.getName());
 		iTestContext.setAttribute("WebDriver", DriverManager.getDriver());
 	}
 
 	@Override
 	public void onFinish(ITestContext iTestContext) {
-		System.out.println("I am in onFinish method " + iTestContext.getName());
+//		System.out.println("I am in onFinish method " + iTestContext.getName());
 	}
 
 	@Override
 	public void onTestStart(ITestResult iTestResult) {
-		System.out.println("I am in onTestStart method " + getTestMethodName(iTestResult) + " start");
+//		System.out.println("I am in onTestStart method " + getTestMethodName(iTestResult) + " start");
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult iTestResult) {
-		System.out.println("I am in onTestSuccess method " + getTestMethodName(iTestResult) + " succeed");
+//		System.out.println("I am in onTestSuccess method " + getTestMethodName(iTestResult) + " succeed");
 	}
 
 //	public void onTestFailure(ITestResult iTestResult) {
@@ -132,12 +132,12 @@ public class AllureTestListener extends TestListenerAdapter{
 	
 	@Override
 	public void onTestSkipped(ITestResult iTestResult) {
-		System.out.println("I am in onTestSkipped method " + getTestMethodName(iTestResult) + " skipped");
+//		System.out.println("I am in onTestSkipped method " + getTestMethodName(iTestResult) + " skipped");
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-		System.out.println("Test failed but it is in defined success ratio " + getTestMethodName(iTestResult));
+//		System.out.println("Test failed but it is in defined success ratio " + getTestMethodName(iTestResult));
 	}
 	
 //	// Text attachments for Allure

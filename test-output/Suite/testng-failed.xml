@@ -3,7 +3,7 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.report.runConfig.AnnotationTransformer"/>
-    <listener class-name="com.report.runConfig.MethodInterceptor"/>
+    <listener class-name="com.report.runConfig.ExtentTestListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>

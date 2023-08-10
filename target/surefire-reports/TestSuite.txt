@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 19.791 s <<< FAILURE! - in TestSuite
-validateOfferesIsSelected2(com.tests.ValidationEpic1)  Time elapsed: 0.765 s  <<< FAILURE!
-java.lang.AssertionError
-	at com.tests.ValidationEpic1.validateOfferesIsSelected2(ValidationEpic1.java:53)
-

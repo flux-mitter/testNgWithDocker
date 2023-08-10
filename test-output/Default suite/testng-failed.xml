@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tests.TestingData">
+      <class name="com.tests.ValidationEpic1">
         <methods>
-          <include name="testingExcelData"/>
+          <include name="tearDown"/>
+          <include name="validateOfferesIsSelected2"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.tests.TestingData -->
+      </class> <!-- com.tests.ValidationEpic1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

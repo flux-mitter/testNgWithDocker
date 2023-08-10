@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.config.PropertiesUtils;
 import com.constants.Contstants;
 import com.enums.Wait;
+import com.report.runConfig.ExtentLogger;
 import com.setup.DriverManager;
 
 public class BasePage {
@@ -26,8 +27,9 @@ public class BasePage {
 //    }
 	// Click Method
 	
-	protected void click(By by,Wait wait) {
+	protected void click(By by,Wait wait,String message) {
 		explicitWait(by,wait).click();
+		ExtentLogger.pass(message);
 	}
 
 	// Write Text

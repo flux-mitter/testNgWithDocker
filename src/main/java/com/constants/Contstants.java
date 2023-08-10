@@ -13,7 +13,7 @@ public class Contstants {
 	@Getter
 	private static final String CONFIGPROPPATH = PATHTORESOURCES + "/config.properties";
 	@Getter
-	private static final String RUNMANAGERPATH = PATHTORESOURCES + "/runManager.xlsx";
+	private static final String RUNMANAGERPATH = System.getProperty("user.dir") + "/runManager.xlsx";
 	@Getter
 	private static final String CONFIGJSONPATH = PATHTORESOURCES + "/jsons/config.json";
 	@Getter

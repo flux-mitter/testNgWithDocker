@@ -15,8 +15,12 @@ public final class DriverManager {
 	
 	public static void setDriver(String browser,String version)
 	{
-		
-		localDriver.set(Driver.getDriver(browser,version));
+		System.out.println("Before new Window :"+localDriver.get());
+		if(Objects.isNull(localDriver.get()))
+		{
+			Driver driver= new Driver();
+		localDriver.set(driver.getDriver(browser,version));
+		}
 	}
 	
 	public static WebDriver getDriver() {
@@ -26,14 +30,13 @@ public final class DriverManager {
 	
 	public static void quitDriver() {
 		//localDriver.remove();
-//		if((Objects.isNull(localDriver.get())))
+		if((Objects.nonNull(localDriver.get())))
 //		{
 			getDriver().quit();
 			localDriver.remove();
-			Driver.setDriverNull();
-//		}
+			//Driver.setDriverNull();
+		}
 	}
 	
 	
 
-}

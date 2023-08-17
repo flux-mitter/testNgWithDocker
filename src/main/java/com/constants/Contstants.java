@@ -1,5 +1,10 @@
 package com.constants;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.enums.ConfigEnum;
+
 import lombok.Getter;
 
 public class Contstants {
@@ -18,13 +23,35 @@ public class Contstants {
 	private static final String CONFIGJSONPATH = PATHTORESOURCES + "/jsons/config.json";
 	@Getter
 	private static final String EXCELPATH = PATHTORESOURCES + "/TestData.xlsx";
-	@Getter
-	private static final String EXTENTREPORFOLDERTPATH = System.getProperty("user.dir") + "/ExtentReport-output/";
+	private static final String EXTENTREPORTFOLDERTPATH = System.getProperty("user.dir") + "/ExtentReport-output/";
+//	private static String EXTENTREPORTFILETPATH = System.getProperty("user.dir") + "/ExtentReport-output/";
+	private static String EXTENTREPORTFILETPATH = "";
+
 	@Getter
 	private static final String RUNMANAGERSHEET = "RUNMANAGER";
 	@Getter
 	private static final String DATASHEET = "DATA";
 	@Getter
 	private static final int EXPLICITLYWAITTIME = 30;
+	
+
+	public static String getExtentreportfiletpath() {
+		if(EXTENTREPORTFILETPATH.isEmpty())
+		{
+			EXTENTREPORTFILETPATH = createReportPath();
+		}
+		return EXTENTREPORTFILETPATH;
+	}
+	private static String createReportPath() {
+		if (com.config.PropertiesUtils.get(ConfigEnum.OVERRIDEREPORTS).equalsIgnoreCase("no")) {
+//			return EXTENTREPORTFOLDERTPATH + new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss").format(new Date()) + "/"
+//					+ new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss").format(new Date()) + "_ExtentReport.html";
+			return EXTENTREPORTFOLDERTPATH + "/index.html";
+		} else {
+//			return EXTENTREPORTFOLDERTPATH + "/" + "ExtentReport.html";
+			return EXTENTREPORTFOLDERTPATH+System.currentTimeMillis()+"/index.html";
+			 
+		}
+	}
 
 }

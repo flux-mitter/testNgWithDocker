@@ -17,7 +17,7 @@ public class AnnotationTransformer implements IAnnotationTransformer{
 	
 	 @Override
 	    public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-	        annotation.setRetryAnalyzer((Class<? extends IRetryAnalyzer>) Retry.class);
+	       // annotation.setRetryAnalyzer((Class<? extends IRetryAnalyzer>) Retry.class);
 	        
 	       // if(testMethod.getName().equalsIgnoreCase(RunManager.getExcelValue().))
 	       // RunManager.getExcelValue().get(testMethod.getName());

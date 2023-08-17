@@ -29,7 +29,7 @@ public class BasePage {
 	
 	protected void click(By by,Wait wait,String message) {
 		explicitWait(by,wait).click();
-		ExtentLogger.pass(message);
+		ExtentLogger.pass(message,true);
 	}
 
 	// Write Text

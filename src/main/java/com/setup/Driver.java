@@ -15,14 +15,14 @@ import com.enums.ConfigEnum;
 
 public final class Driver {
 	
-	private Driver()
+	Driver()
 	{
 		
 	}
 	
-	private static WebDriver driver;
+	private WebDriver driver;
 	
-	public static WebDriver getDriver(String browser,String version) {
+	public WebDriver getDriver(String browser,String version) {
 //		System.out.println("driver " + driver);
 		if (Objects.isNull(driver))
 		{
@@ -42,12 +42,12 @@ public final class Driver {
 		
 		return driver;
 	}
-	public static void setDriverNull()
+	public void setDriverNull()
 	{
 		driver=null;
 	}
 	
-	public static WebDriver createDriver(String browser,String version)
+	private WebDriver createDriver(String browser,String version)
 	{
 		//WebDriver driver = null;
 		DesiredCapabilities dc = new DesiredCapabilities();
@@ -64,6 +64,8 @@ public final class Driver {
 			ChromeOptions options = new ChromeOptions();
 //			options.setBrowserVersion("114.0.5735.198");
 			options.addArguments("--remote-allow-origins=*");
+			options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"}); 
+			//options.addArguments("−−incognito");
 //			options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);

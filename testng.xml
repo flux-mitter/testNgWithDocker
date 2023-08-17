@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<!-- <listeners>
-        <listener class-name="com.report.AllureTestListener"/>
-</listeners> -->
 <listeners>
-    <!--     <listener class-name="com.report.runConfig.AllureTestListener"/> -->
        <listener class-name="com.report.runConfig.AnnotationTransformer"/> 
        <!--listener class-name="com.report.runConfig.MethodInterceptor"/--> 
        <listener class-name="com.report.runConfig.ExtentTestListener"/> 
     </listeners>
-  <test thread-count="5" name="Test">
+  <test thread-count="4" name="Test" parallel="methods">
     <classes>
       <class name="com.tests.ValidationEpic1"/>
     </classes>

@@ -11,11 +11,13 @@ import org.testng.annotations.AfterMethod;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 
 import com.config.PropertiesUtils;
 import com.enums.ConfigEnum;
 import com.pages.AirAvailability;
 import com.pages.HomePage;
+import com.report.runConfig.ExtentLogger;
 import com.setup.DriverManager;
 
 @Listeners({com.report.runConfig.AllureTestListener.class})
@@ -25,9 +27,11 @@ public class BaseTest {
 	AirAvailability airAvailability;
 	
 	@BeforeMethod
-	public void setUp()
+	@Parameters({"BROWSER","BROWSERVERSION"})
+	public void setUp(String browser, String browserVersion)
 	{
-		DriverManager.setDriver(PropertiesUtils.get(ConfigEnum.BROWSER), PropertiesUtils.get(ConfigEnum.BROWSERVERSION));
+		//DriverManager.setDriver(PropertiesUtils.get(ConfigEnum.BROWSER), PropertiesUtils.get(ConfigEnum.BROWSERVERSION));
+		DriverManager.setDriver(browser,browserVersion);
 		if(Objects.isNull(homePage))
 		{
 		homePage=new HomePage();
@@ -35,6 +39,13 @@ public class BaseTest {
 		}
 		
 	}
+//	@Parameters({"BROWSER","BROWSERVERSION"})
+//	@BeforeTest
+//	public void browserLaunched(String browser, String browserVersion)
+//	{
+//		ExtentLogger.pass("Application launched with : "+browser+" and url :"+ConfigEnum.URL ,true);
+//	}
+	
 	@AfterMethod
 	protected void tearDown() {
 		DriverManager.quitDriver();

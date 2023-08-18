@@ -10,6 +10,7 @@ import org.testng.IMethodInstance;
 import org.testng.IRetryAnalyzer;
 import org.testng.annotations.ITestAnnotation;
 
+import com.enums.ConfigEnum;
 import com.setup.RunManager;
 
 
@@ -32,6 +33,8 @@ public class AnnotationTransformer implements IAnnotationTransformer{
 	        }
 	        annotation.setInvocationCount(RunManager.getExcelValue().get(testMethod.getName()).getInvocationCount());
 	        annotation.setPriority(RunManager.getExcelValue().get(testMethod.getName()).getPriority());
+	      
+	        
 	        
 	    }
 //	 @Override

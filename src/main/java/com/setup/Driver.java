@@ -6,11 +6,14 @@ import java.util.Objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.safari.SafariDriver;
 
 import com.config.PropertiesUtils;
 import com.enums.ConfigEnum;
+import com.report.runConfig.ExtentLogger;
 
 
 public final class Driver {
@@ -72,9 +75,19 @@ public final class Driver {
 			options.merge(cap);
 			// cap.setCapability(ChromeOptions.CAPABILITY, options);
 			driver = new ChromeDriver(options);
-			driver.manage().window().maximize();
-			driver.get(PropertiesUtils.get(ConfigEnum.URL));
+			
 		}
+		else if(browser.equalsIgnoreCase("Firefox"))
+		{
+			driver=new FirefoxDriver();
+		}
+		else if(browser.equalsIgnoreCase("Safari"))
+		{
+			driver=new SafariDriver();
+		}
+		driver.manage().window().maximize();
+		driver.get(PropertiesUtils.get(ConfigEnum.URL));
+		
 		return driver;
 	}
 //	

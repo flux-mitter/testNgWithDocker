@@ -49,7 +49,7 @@ public final class PropertiesUtils {
 	}
 	@SuppressWarnings("null")
 	public static String get(ConfigEnum enumkey) {
-
+		
 		if (Objects.isNull(enumkey) && Objects.isNull(CONFIGMAP.get(enumkey.name().toLowerCase()))) {
 			throw new PropertyFileException(
 					"Property with Key => " + enumkey + " is not found!!! Please check config.properties...");

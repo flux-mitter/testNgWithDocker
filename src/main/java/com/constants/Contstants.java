@@ -3,6 +3,8 @@ package com.constants;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.openqa.selenium.WebDriver;
+
 import com.enums.ConfigEnum;
 
 import lombok.Getter;
@@ -12,6 +14,7 @@ public class Contstants {
 	private Contstants() {
 		throw new IllegalStateException("Utility class");
 	}
+	
 
 	@Getter
 	private static final String PATHTORESOURCES = System.getProperty("user.dir") + "/src/test/resources/com/resources";

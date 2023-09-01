@@ -1,5 +1,7 @@
 package com.setup;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -9,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import com.config.PropertiesUtils;
@@ -25,7 +28,7 @@ public final class Driver {
 	
 	private WebDriver driver;
 	
-	public WebDriver getDriver(String browser,String version) {
+	public WebDriver getDriver(String browser,String version) throws MalformedURLException {
 //		System.out.println("driver " + driver);
 		if (Objects.isNull(driver))
 		{
@@ -50,7 +53,7 @@ public final class Driver {
 		driver=null;
 	}
 	
-	private WebDriver createDriver(String browser,String version)
+	private WebDriver createDriver(String browser,String version) throws MalformedURLException
 	{
 		//WebDriver driver = null;
 		DesiredCapabilities dc = new DesiredCapabilities();
@@ -79,15 +82,20 @@ public final class Driver {
 		}
 		else if(browser.equalsIgnoreCase("Firefox"))
 		{
-			driver=new FirefoxDriver();
+			DesiredCapabilities cap = new DesiredCapabilities();
+			cap.setBrowserName("firefox");
+			System.out.println("running firefox");
+			driver = new RemoteWebDriver(new URL("http://localhost:4444"), cap);
+			//driver=new FirefoxDriver();
 		}
 		else if(browser.equalsIgnoreCase("Safari"))
 		{
 			driver=new SafariDriver();
 		}
-		driver.manage().window().maximize();
-		driver.get(PropertiesUtils.get(ConfigEnum.URL));
-		
+		//driver.manage().window().maximize();
+		//driver.get(PropertiesUtils.get(ConfigEnum.URL));
+		driver.get("https://google.com");
+		System.out.println("Titile = " + driver.getTitle());
 		return driver;
 	}
 //	

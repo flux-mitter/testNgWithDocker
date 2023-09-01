@@ -1,5 +1,6 @@
 package com.setup;
 
+import java.net.MalformedURLException;
 import java.util.Objects;
 
 import org.openqa.selenium.WebDriver;
@@ -19,7 +20,12 @@ public final class DriverManager {
 		if(Objects.isNull(localDriver.get()))
 		{
 			Driver driver= new Driver();
-		localDriver.set(driver.getDriver(browser,version));
+		try {
+			localDriver.set(driver.getDriver(browser,version));
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		}
 	}
 	

@@ -8,18 +8,14 @@
 		<listener
 			class-name="com.report.runConfig.ExtentTestListener" />
 	</listeners>
-	<test thread-count="1" name="Chrome" parallel="methods">
-		<parameter name="BROWSER" value="Chrome" />
+	<!-- <test thread-count="1" name="Chrome" parallel="methods"> <parameter 
+		name="BROWSER" value="Chrome" /> <parameter name="BROWSERVERSION" value="103" 
+		/> <classes> <class name="com.tests.ValidationEpic1" /> </classes> </test> -->
+	<test thread-count="1" name="firefox" parallel="methods">
+		<parameter name="BROWSER" value="firefox" />
 		<parameter name="BROWSERVERSION" value="103" />
 		<classes>
 			<class name="com.tests.ValidationEpic1" />
 		</classes>
 	</test>
-	<!-- <test thread-count="2" name="firefox" parallel="methods">
-		<parameter name="BROWSER" value="firefox" />
-		<parameter name="BROWSERVERSION" value="103" />
-		<classes>
-			<class name="com.tests.ValidationEpic1" />
-		</classes> 
-	</test> -->
 </suite> <!-- Suite -->

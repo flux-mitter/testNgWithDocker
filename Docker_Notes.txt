@@ -1,0 +1,123 @@
+
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+docker pull selenium/hub
+
+
+$ docker network rm gridnetwork
+docker network create gridnetwork
+
+start the hub
+docker run -d -p 4445:4444 --net gridnetwork --name seleniumHub selenium/hub
+
+Start the Node
+docker run -d -p 4446:5900 --net gridnetwork -e HUB_HOST=seleniumHub --name chromeNode selenium/node-chrome-debug
+
+docker ps -a
+
+
+docker network create gridnetwork
+docker run -d -p 4445:4444 --net gridnetwork --name seleniumHub selenium/hub 
+docker run -d -p 4446:5900 --net gridnetwork -e HUB_HOST=seleniumHub --name chromeNode selenium/node-chrome-debug
+docker run -d -p 4446:5900 --net gridnetwork -e HUB_HOST=seleniumHub --name chromeNode selenium/node-chrome-debug
+docker run -d -P --net gridnetwork -e HUB_HOST=seleniumHub --name chromeNode2 selenium/node-chrome-debug
+docker run -d -p 4447:5900 --net gridnetwork -e HUB_HOST=seleniumHub --name firefoxNode selenium/node-firefox-debug
+docker run -d -p 4448:5900 --net gridnetwork -e HUB_HOST=seleniumHub --name operaNode selenium/node-opera
+
+
+Run Docker YML
+docker compose -f docker-compose.yaml up
+
+
+docker run -d -P --link seleniumHub:hub selenium/node-chrome-debug
+docker start $(docker ps -a -q)
+
+docker run -d -P --link seleniumHub:hub --net gridnetwork selenium/node-chrome-debug
+
+docker run -d -p 4446:4445 --net gridnetwork -e HUB_HOST=seleniumHub --name chromeNode selenium/node-chrome-debug
+
+docker run -it --link compose_mysql_1:mysql --net compose_default -v /home/remotecto/www/remotecto:/var/www/html hub.remotecto.com/wp-cli wp plugin install stops-core-theme-and-plugin-updates --activate
+
+
+
+Latest working :
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+docker network rm grid
+docker network create grid
+
+docker pull selenium/hub
+docker run -d -p 4442-4444:4442-4444 --net grid --name selenium-hub selenium/hub:latest
+
+docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub \
+    --shm-size="2g" \
+    -e SE_EVENT_BUS_PUBLISH_PORT=4442 \
+    -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
+    selenium/node-chrome:latest
+    
+    docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub \
+    --shm-size="4g" \
+    -e SE_EVENT_BUS_PUBLISH_PORT=4442 \
+    -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
+    selenium/node-chrome:114.0
+    volumes:
+      - /dev/shm:/dev/shm
+    
+    
+    docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub \
+    --shm-size="2g" \
+    -e SE_EVENT_BUS_PUBLISH_PORT=4442 \
+    -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 \
+    selenium/node-firefox:latest
+    
+    docker ps -a
+    restart docker container:
+    docker-compose up -d
+    
+    from chrome issue :
+    
+      chrome:
+    image: selenium/node-chrome:latest
+    depends_on: 
+      - hub
+    environment: 
+      - HUB_HOST=hub
+
+#   Below volumn command resolves the tab crash issue in linux system     
+    volumes:
+      - /dev/shm:/dev/shm
+      
+      
+      open allure reports
+      allure serve "/Users/preetammitra/Desktop/Learn EveryDay/Automation Workspaces/All in 1 Workspace/testngUpdated/allure-results"
+      
+      
+      
+      
+      version: "3"
+services:
+  chrome:
+    image: selenium/node-chrome:latest
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+  firefox:
+    image: selenium/node-firefox:latest
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+  selenium-hub:
+    image: selenium/hub:latest
+    container_name: selenium-hub
+    ports:
+      - "4442:4442"
+      - "4443:4443"
+      - "4444:4444"

@@ -92,10 +92,11 @@ public final class Driver {
 		{
 			driver=new SafariDriver();
 		}
-		//driver.manage().window().maximize();
-		//driver.get(PropertiesUtils.get(ConfigEnum.URL));
-		driver.get("https://google.com");
+		driver.manage().window().maximize();
+		driver.get(PropertiesUtils.get(ConfigEnum.URL));
+		//driver.get("https://google.com");
 		System.out.println("Titile = " + driver.getTitle());
+		driver.navigate().refresh();
 		return driver;
 	}
 //	

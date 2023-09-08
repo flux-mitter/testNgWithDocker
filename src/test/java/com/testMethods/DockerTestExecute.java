@@ -2,6 +2,7 @@ package com.testMethods;
 
 import java.net.MalformedURLException;
 
+
 import java.net.URL;
 import java.time.Duration;
 import java.util.Iterator;
@@ -13,7 +14,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.devtools.v112.browser.Browser;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.http.ClientConfig;

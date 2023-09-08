@@ -16,7 +16,9 @@ import org.testng.annotations.Parameters;
 import com.config.PropertiesUtils;
 import com.enums.ConfigEnum;
 import com.pages.AirAvailability;
+import com.pages.AmazonHomePage;
 import com.pages.HomePage;
+import com.pages.ProductSearchResult;
 import com.report.runConfig.ExtentLogger;
 import com.setup.DriverManager;
 
@@ -25,6 +27,8 @@ public class BaseTest {
 	
 	HomePage homePage;
 	AirAvailability airAvailability;
+	AmazonHomePage amazonHomePage;
+	ProductSearchResult productSearchResult;
 	
 	@BeforeMethod
 	@Parameters({"BROWSER","BROWSERVERSION"})
@@ -36,6 +40,9 @@ public class BaseTest {
 		{
 		homePage=new HomePage();
 		airAvailability = new AirAvailability();
+		amazonHomePage=new AmazonHomePage(); 
+		productSearchResult = new ProductSearchResult();
+		
 		}
 		
 	}
@@ -46,12 +53,12 @@ public class BaseTest {
 //		ExtentLogger.pass("Application launched with : "+browser+" and url :"+ConfigEnum.URL ,true);
 //	}
 	
-	@AfterMethod
-	protected void tearDown() {
-		DriverManager.quitDriver();
-		homePage=null;
-		airAvailability=null;
-	}
+//	@AfterMethod
+//	protected void tearDown() {
+//		DriverManager.quitDriver();
+//		homePage=null;
+//		airAvailability=null;
+//	}
 	
 //	@AfterSuite
 //	public void displayOutput() throws IOException

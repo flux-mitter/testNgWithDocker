@@ -1,7 +1,8 @@
 package com.pages;
 
 import java.time.Duration;
-
+import java.util.ArrayList;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,6 +20,7 @@ import com.setup.DriverManager;
 public class BasePage {
 	protected WebDriver driver;
 	protected WebDriverWait wait;
+	ReusableMethods reusableMethods;
 
 	// Constructor
 //    public BasePage() {
@@ -26,28 +28,47 @@ public class BasePage {
 //        wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10));
 //    }
 	// Click Method
-	
-	protected void click(By by,Wait wait,String message) {
-		explicitWait(by,wait).click();
-		ExtentLogger.pass(message,true);
+
+	public ReusableMethods getReusableMethods() {
+		setReusableMethods();
+		return reusableMethods;
+	}
+
+	public void setReusableMethods() {
+		reusableMethods = new ReusableMethods();
+	}
+
+	protected void click(By by, Wait wait, String message) {
+		explicitWait(by, wait).click();
+		ExtentLogger.pass(message, true);
 	}
 
 	// Write Text
-	protected void writeText(By by, Wait wait,String text) {
-		explicitWait(by,wait).sendKeys(text);
+	protected void writeText(By by, Wait wait, String text) {
+		explicitWait(by, wait).sendKeys(text);
 	}
 
 	// Read Text
 	protected String readText(By by, Wait wait) {
-		return explicitWait(by,wait).getText();
+		return explicitWait(by, wait).getText();
+	}
+
+	// Read Text
+	protected List<String> ListReadText(By by, Wait wait) {
+		// return explicitWait(by,wait).getText();
+		List<WebElement> elements = DriverManager.getDriver().findElements(by);
+		explicitWait(by, wait);
+		ArrayList<String> items = new ArrayList<String>();
+		elements.forEach(item -> items.add(item.getText()));
+		return items;
+
 	}
 
 	// Wait
 	// Read Text
 	protected boolean isDisplayed(By by, Wait wait) {
-			return explicitWait(by,wait).isDisplayed();
-		}
-	
+		return explicitWait(by, wait).isDisplayed();
+	}
 
 	protected WebElement explicitWait(By by, Wait wait) {
 		WebElement element = null;

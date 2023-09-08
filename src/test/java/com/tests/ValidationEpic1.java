@@ -124,5 +124,19 @@ public class ValidationEpic1 extends BaseTest {
 		homePage.clickSearchFlights(Wait.CLICKABLE, "Clicked on Search ");
 		airAvailability.validateFirstResult(Wait.PRESENCE, "validating 1st price displayed on page");
 	}
+	@Test
+	@FrameworkAnnotations(author = { "Preetam" }, executionType = { ExecutionType.REGRESSION, ExecutionType.SMOKE })
+	@Epic(value = "AZ001")
+	@Description("Search Product in Amazon")
+	@Story("Search product")
+	@Feature("Broken")
+	@Severity(SeverityLevel.CRITICAL)
+	public void searchProduct() throws InterruptedException {
+		//homePage.selectSubcategory("Broken",Wait.CLICKABLE,"Clicked on Broken");
+		amazonHomePage.searchProduct(Wait.PRESENCE, "iPhone 14", "Search Iphone 14");
+		productSearchResult.productDisplaySort(Wait.PRESENCE, "Low to High");
+		productSearchResult.validateProductResultSorting(Wait.PRESENCE, "iPhone 14");
+		
+	}
 
 }

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -59,10 +60,20 @@ public class BasePage {
 		List<WebElement> elements = DriverManager.getDriver().findElements(by);
 		explicitWait(by, wait);
 		ArrayList<String> items = new ArrayList<String>();
-		elements.forEach(item -> items.add(item.getText()));
+		//System.out.println(elements);
+		scrollIntoView(elements.get(0));
+		//System.out.println(elements.get(0).getText());
+		System.out.println(elements.get(0).getAttribute("textContent"));
+//		System.out.println(elements.get(0).getAttribute("innerHTML"));
+//		elements.forEach(item -> items.add(item.getText()));
+		elements.forEach(item -> items.add(item.getAttribute("textContent")));
+		System.out.println(items);
 		return items;
 
 	}
+	public void scrollIntoView(WebElement element) {
+        ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+    }
 
 	// Wait
 	// Read Text

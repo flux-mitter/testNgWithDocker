@@ -2,7 +2,7 @@ version: "3"
 services:
   chrome:
     image: selenium/node-chrome:latest
-    shm_size: 2gb
+    shm_size: 6gb
     depends_on:
       - selenium-hub
     environment:
@@ -13,7 +13,7 @@ services:
 
   firefox:
     image: selenium/node-firefox:latest
-    shm_size: 2gb
+    shm_size: 6gb
     depends_on:
       - selenium-hub
     environment:
@@ -28,3 +28,21 @@ services:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
+
+  elasticsearch:
+      image: elasticsearch:8.9.1
+      container_name: elasticsearch
+      environment:
+      - discovery.type=single-node
+      ports:
+      - 9200:9200
+      - 9300:9300
+  kibana:
+      image: kibana:8.9.1
+      container_name: kibana
+      depends_on:
+      - elasticsearch
+      links:
+      - elasticsearch:elasticsearch
+      ports:
+      - 5601:5601

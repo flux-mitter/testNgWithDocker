@@ -150,13 +150,13 @@
     &lt;listener class-name=&quot;com.report.runConfig.AnnotationTransformer&quot;/&gt;
     &lt;listener class-name=&quot;com.report.runConfig.ExtentTestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;Chrome&quot;&gt;
-    &lt;parameter name=&quot;BROWSER&quot; value=&quot;Chrome&quot;/&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;methods&quot; name=&quot;firefox&quot;&gt;
+    &lt;parameter name=&quot;BROWSER&quot; value=&quot;firefox&quot;/&gt;
     &lt;parameter name=&quot;BROWSERVERSION&quot; value=&quot;103&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.tests.ValidationEpic1&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Chrome --&gt;
+  &lt;/test&gt; &lt;!-- firefox --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -168,7 +168,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Chrome (1 class)</span>
+                <span class="test-name">firefox (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,12 +198,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'searchProduct')
 data.setCell(0, 2, 'com.tests.ValidationEpic1')
-data.setCell(0, 3, 122694);
+data.setCell(0, 3, 38706);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 38 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -252,13 +252,17 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.tests.ValidationEpic1</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setUp(Chrome, 103)</span>
+                <span class="method-name">setUp(firefox, 103)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchProduct</span>
-                <span class="method-start">12094 ms</span>
+                <span class="method-start">59178 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">97923 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

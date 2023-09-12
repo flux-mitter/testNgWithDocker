@@ -63,11 +63,11 @@ public class BasePage {
 		//System.out.println(elements);
 		scrollIntoView(elements.get(0));
 		//System.out.println(elements.get(0).getText());
-		System.out.println(elements.get(0).getAttribute("textContent"));
+//		System.out.println(elements.get(0).getAttribute("textContent"));
 //		System.out.println(elements.get(0).getAttribute("innerHTML"));
 //		elements.forEach(item -> items.add(item.getText()));
 		elements.forEach(item -> items.add(item.getAttribute("textContent")));
-		System.out.println(items);
+//		System.out.println(items);
 		return items;
 
 	}

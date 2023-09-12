@@ -48,10 +48,10 @@ public class ProductSearchResult extends BasePage {
 
 	public void validateProductResultSorting(Wait wait,String product) {
 		
-		System.out.println(priceOfProductsSorted(product));
+//		System.out.println(priceOfProductsSorted(product));
 		List<String> itemPriceString= ListReadText(priceOfProductsSorted(product), wait);
 		ArrayList<Integer> priceListDisplayed = new ArrayList<Integer>();
-		System.out.println(itemPriceString);
+//		System.out.println(itemPriceString);
 		itemPriceString.forEach(price -> priceListDisplayed.add(Integer.parseInt(price.replace("₹", "").replace(",", ""))));
 		ArrayList<Integer> priceListSorted = new ArrayList<Integer>();
 		priceListSorted.addAll(priceListDisplayed);

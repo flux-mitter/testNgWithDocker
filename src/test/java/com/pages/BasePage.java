@@ -57,6 +57,12 @@ public class BasePage {
 	// Read Text
 	protected List<String> ListReadText(By by, Wait wait) {
 		// return explicitWait(by,wait).getText();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		List<WebElement> elements = DriverManager.getDriver().findElements(by);
 		explicitWait(by, wait);
 		ArrayList<String> items = new ArrayList<String>();

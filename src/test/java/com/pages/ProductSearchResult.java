@@ -31,7 +31,8 @@ public class ProductSearchResult extends BasePage {
 	}
 
 	private By priceOfProductsSorted(String product) {
-		return By.xpath("//h2/a/span[contains(text(),'"+product+"')and not(contains(text(),'Pro')) and not(contains(text(),'Plus'))]/../../../following-sibling::div//span[@class='a-price']/span[contains(text(),'₹')]");
+		//return By.xpath("//h2/a/span[contains(text(),'"+product+"')and not(contains(text(),'Pro')) and not(contains(text(),'Plus'))]/../../../following-sibling::div//span[@class='a-price']/span[contains(text(),'₹')]");
+		return By.xpath("//h2/a/span[contains(text(),'"+product+"')]/../../../following-sibling::div//span[@class='a-price']/span[contains(text(),'₹')]");
 	}
 
 	public void productDisplaySort(Wait wait, String sortingMechanism) {
@@ -48,14 +49,14 @@ public class ProductSearchResult extends BasePage {
 
 	public void validateProductResultSorting(Wait wait,String product) {
 		
-//		System.out.println(priceOfProductsSorted(product));
+		System.out.println(priceOfProductsSorted(product));
 		List<String> itemPriceString= ListReadText(priceOfProductsSorted(product), wait);
 		ArrayList<Integer> priceListDisplayed = new ArrayList<Integer>();
-//		System.out.println(itemPriceString);
+		System.out.println(itemPriceString);
 		itemPriceString.forEach(price -> priceListDisplayed.add(Integer.parseInt(price.replace("₹", "").replace(",", ""))));
 		ArrayList<Integer> priceListSorted = new ArrayList<Integer>();
 		priceListSorted.addAll(priceListDisplayed);
-		Collections.sort(priceListSorted);
+		Collections.sort(priceListSorted,Collections.reverseOrder());
 		System.out.println("priceListDisplayed ;"+priceListDisplayed);
 		System.out.println("priceListSorted ;"+priceListSorted);
 		assertTrue(getReusableMethods().areArrayListsEqual(priceListDisplayed, priceListSorted));
@@ -66,3 +67,4 @@ public class ProductSearchResult extends BasePage {
 	}
 
 }
+

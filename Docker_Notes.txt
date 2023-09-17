@@ -121,3 +121,15 @@ services:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
+
+ Elastic Search token MSI :
+  eyJ2ZXIiOiI4LjEwLjAiLCJhZHIiOlsiMTcyLjMxLjE2MC4xOjkyMDEiXSwiZmdyIjoiNGFjODlhMzA1YTFmODBlMWI0NjE4YzQ0YmFhZTkzZjE4MjRlNjRlYzFlZGQ2ODgzM2Q2NGFjY2RjNWRjZTdkYyIsImtleSI6InpjVWZvSW9Ca0sybHczTF9oNE4zOkVFbXdmQzVtVHdlSVpnNjQ5cXVpWWcifQ==
+  
+  https://localhost:9200
+  Run Comman line in docker container(here knowing the enrollment token)	 
+  docker exec -it <docker id> bin/elasticsearch-create-enrollment-token -s kibana
+  
+  docker start elasticsearch
+  docker logs elasticsearch
+  docker start kibana
+  docker logs kibana

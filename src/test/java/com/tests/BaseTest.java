@@ -53,12 +53,12 @@ public class BaseTest {
 //		ExtentLogger.pass("Application launched with : "+browser+" and url :"+ConfigEnum.URL ,true);
 //	}
 	
-//@AfterMethod
-//	protected void tearDown() {
-//		DriverManager.quitDriver();
-//		homePage=null;
-//		airAvailability=null;
-//	}
+@AfterMethod
+	protected void tearDown() {
+		DriverManager.quitDriver();
+		homePage=null;
+		airAvailability=null;
+	}
 	
 //	@AfterSuite
 //	public void displayOutput() throws IOException

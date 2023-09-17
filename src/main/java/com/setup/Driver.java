@@ -60,9 +60,17 @@ public final class Driver {
 		
 		if(browser.equalsIgnoreCase("Chrome"))
 		{
-			
+			if(PropertiesUtils.get(ConfigEnum.RUNMODE).equalsIgnoreCase("Docker"))
+			{
+			DesiredCapabilities cap = new DesiredCapabilities();
+			cap.setBrowserName("chrome");
+			System.out.println("running chrome");
+			driver = new RemoteWebDriver(new URL("http://localhost:4444"), cap);
+			}
+			else
+			{
 			//String downloadFilepath = System.getProperty("user.dir") + "\\" + "data" + "\\" + "reports\\download";
-			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+//			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 //			chromePrefs.put("profile.default_content_settings.popups", 0);
 //			chromePrefs.put("profile.default_content_setting_values.automatic_downloads", 1);
 //			chromePrefs.put("download.prompt_for_download", false);
@@ -78,14 +86,22 @@ public final class Driver {
 			options.merge(cap);
 			// cap.setCapability(ChromeOptions.CAPABILITY, options);
 			driver = new ChromeDriver(options);
+			}
 			
 		}
 		else if(browser.equalsIgnoreCase("Firefox"))
 		{
+			if(PropertiesUtils.get(ConfigEnum.RUNMODE).equalsIgnoreCase("Docker"))
+			{
 			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setBrowserName("firefox");
 			System.out.println("running firefox");
 			driver = new RemoteWebDriver(new URL("http://localhost:4444"), cap);
+			}
+			else
+			{
+				driver = new FirefoxDriver();
+			}
 			//driver=new FirefoxDriver();
 		}
 		else if(browser.equalsIgnoreCase("Safari"))

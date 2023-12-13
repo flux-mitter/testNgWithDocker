@@ -1,13 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="9" passed="1" failed="0" skipped="0">
+<testng-results ignored="16" total="28" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-11T01:49:58 IST" name="Suite" finished-at="2023-09-11T01:51:43 IST" duration-ms="104883">
+  <suite started-at="2023-09-18T02:58:20 IST" name="Suite" finished-at="2023-09-18T03:01:43 IST" duration-ms="202512">
     <groups>
     </groups>
-    <test started-at="2023-09-11T01:49:58 IST" name="firefox" finished-at="2023-09-11T01:51:43 IST" duration-ms="104883">
+    <test started-at="2023-09-18T02:58:20 IST" name="chrome" finished-at="2023-09-18T02:59:54 IST" duration-ms="94150">
       <class name="com.tests.ValidationEpic1">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@47d9c01]" started-at="2023-09-11T01:49:59 IST" name="setUp" finished-at="2023-09-11T01:50:58 IST" duration-ms="59139" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:58:20 IST" name="setUp" finished-at="2023-09-18T02:58:41 IST" duration-ms="21047" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:58:20 IST" name="setUp" finished-at="2023-09-18T02:58:26 IST" duration-ms="5564" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct()[pri:1, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:58:26 IST" name="searchProduct" description="validate the Sorting works" finished-at="2023-09-18T02:58:39 IST" duration-ms="12928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:58:39 IST" name="tearDown" finished-at="2023-09-18T02:58:39 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:58:39 IST" name="setUp" finished-at="2023-09-18T02:58:56 IST" duration-ms="17417" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct_2nd()[pri:1, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:58:41 IST" name="searchProduct_2nd" description="validate the Sorting works 2" finished-at="2023-09-18T02:58:54 IST" duration-ms="12390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct_2nd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:58:54 IST" name="tearDown" finished-at="2023-09-18T02:58:54 IST" duration-ms="97" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:58:54 IST" name="setUp" finished-at="2023-09-18T02:59:11 IST" duration-ms="17545" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct()[pri:1, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:58:56 IST" name="searchProduct" description="validate the Sorting works" finished-at="2023-09-18T02:59:09 IST" duration-ms="12783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:59:09 IST" name="tearDown" finished-at="2023-09-18T02:59:09 IST" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:59:09 IST" name="setUp" finished-at="2023-09-18T02:59:26 IST" duration-ms="17040" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct_2nd()[pri:1, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:59:11 IST" name="searchProduct_2nd" description="validate the Sorting works 2" finished-at="2023-09-18T02:59:24 IST" duration-ms="12377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct_2nd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:59:24 IST" name="tearDown" finished-at="2023-09-18T02:59:24 IST" duration-ms="118" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="searchProduct_3rd()[pri:1, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:59:26 IST" name="searchProduct_3rd" description="validate the Sorting works 3" finished-at="2023-09-18T02:59:39 IST" duration-ms="12746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct_3rd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:59:39 IST" name="tearDown" finished-at="2023-09-18T02:59:39 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:59:39 IST" name="setUp" finished-at="2023-09-18T02:59:42 IST" duration-ms="2738" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct_3rd()[pri:1, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:59:42 IST" name="searchProduct_3rd" description="validate the Sorting works 3" finished-at="2023-09-18T02:59:54 IST" duration-ms="12229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct_3rd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@2b1d1a5]" started-at="2023-09-18T02:59:54 IST" name="tearDown" finished-at="2023-09-18T02:59:54 IST" duration-ms="101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tests.ValidationEpic1 -->
+    </test> <!-- chrome -->
+    <test started-at="2023-09-18T02:59:54 IST" name="firefox" finished-at="2023-09-18T03:01:43 IST" duration-ms="108330">
+      <class name="com.tests.ValidationEpic1">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T02:59:54 IST" name="setUp" finished-at="2023-09-18T03:00:01 IST" duration-ms="7131" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,18 +164,138 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[103]]>
+                <![CDATA[116]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchProduct()[pri:1, instance:com.tests.ValidationEpic1@47d9c01]" started-at="2023-09-11T01:50:58 IST" name="searchProduct" description="validate the Sorting works" finished-at="2023-09-11T01:51:37 IST" duration-ms="38706" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T02:59:54 IST" name="setUp" finished-at="2023-09-18T03:00:19 IST" duration-ms="24631" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct()[pri:1, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:02 IST" name="searchProduct" description="validate the Sorting works" finished-at="2023-09-18T03:00:13 IST" duration-ms="11447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProduct -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@47d9c01]" started-at="2023-09-11T01:51:37 IST" name="tearDown" finished-at="2023-09-11T01:51:43 IST" duration-ms="6596" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:13 IST" name="tearDown" finished-at="2023-09-18T03:00:14 IST" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:14 IST" name="setUp" finished-at="2023-09-18T03:00:36 IST" duration-ms="22505" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct_2nd()[pri:1, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:19 IST" name="searchProduct_2nd" description="validate the Sorting works 2" finished-at="2023-09-18T03:00:30 IST" duration-ms="11360" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct_2nd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:30 IST" name="tearDown" finished-at="2023-09-18T03:00:31 IST" duration-ms="837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:31 IST" name="setUp" finished-at="2023-09-18T03:00:54 IST" duration-ms="23090" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct()[pri:1, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:36 IST" name="searchProduct" description="validate the Sorting works" finished-at="2023-09-18T03:00:48 IST" duration-ms="11281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:48 IST" name="tearDown" finished-at="2023-09-18T03:00:48 IST" duration-ms="879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:49 IST" name="setUp" finished-at="2023-09-18T03:01:12 IST" duration-ms="23643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct_2nd()[pri:1, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:00:54 IST" name="searchProduct_2nd" description="validate the Sorting works 2" finished-at="2023-09-18T03:01:06 IST" duration-ms="11318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct_2nd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:01:06 IST" name="tearDown" finished-at="2023-09-18T03:01:07 IST" duration-ms="924" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="searchProduct_3rd()[pri:1, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:01:12 IST" name="searchProduct_3rd" description="validate the Sorting works 3" finished-at="2023-09-18T03:01:24 IST" duration-ms="11359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct_3rd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:01:24 IST" name="tearDown" finished-at="2023-09-18T03:01:24 IST" duration-ms="827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:01:24 IST" name="setUp" finished-at="2023-09-18T03:01:31 IST" duration-ms="6271" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchProduct_3rd()[pri:1, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:01:31 IST" name="searchProduct_3rd" description="validate the Sorting works 3" finished-at="2023-09-18T03:01:42 IST" duration-ms="11180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct_3rd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.ValidationEpic1@396f2724]" started-at="2023-09-18T03:01:42 IST" name="tearDown" finished-at="2023-09-18T03:01:43 IST" duration-ms="841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

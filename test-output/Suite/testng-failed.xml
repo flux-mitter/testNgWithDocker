@@ -5,8 +5,8 @@
     <listener class-name="com.report.runConfig.AnnotationTransformer"/>
     <listener class-name="com.report.runConfig.ExtentTestListener"/>
   </listeners>
-  <test thread-count="5" parallel="methods" name="Chrome(failed)">
-    <parameter name="BROWSER" value="Chrome"/>
+  <test thread-count="5" parallel="methods" name="firefox(failed)">
+    <parameter name="BROWSER" value="firefox"/>
     <parameter name="BROWSERVERSION" value="103"/>
     <classes>
       <class name="com.tests.ValidationEpic1">
@@ -16,5 +16,5 @@
         </methods>
       </class> <!-- com.tests.ValidationEpic1 -->
     </classes>
-  </test> <!-- Chrome(failed) -->
+  </test> <!-- firefox(failed) -->
 </suite> <!-- Failed suite [Suite] -->

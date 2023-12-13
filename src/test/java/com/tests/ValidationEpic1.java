@@ -138,5 +138,34 @@ public class ValidationEpic1 extends BaseTest {
 		productSearchResult.validateProductResultSorting(Wait.NONE, "iPhone 14");
 		
 	}
+	
+	@Test
+	@FrameworkAnnotations(author = { "Preetam" }, executionType = { ExecutionType.REGRESSION, ExecutionType.SMOKE })
+	@Epic(value = "AZ002")
+	@Description("Search Product in Amazon2")
+	@Story("Search product")
+	@Feature("Broken")
+	@Severity(SeverityLevel.CRITICAL)
+	public void searchProduct_2nd() throws InterruptedException {
+		//homePage.selectSubcategory("Broken",Wait.CLICKABLE,"Clicked on Broken");
+		amazonHomePage.searchProduct(Wait.PRESENCE, "iPhone 14", "Search Iphone 14");
+		productSearchResult.productDisplaySort(Wait.PRESENCE, "High to Low");
+		productSearchResult.validateProductResultSorting(Wait.NONE, "iPhone 14");
+		
+	}
+	@Test
+	@FrameworkAnnotations(author = { "Preetam" }, executionType = { ExecutionType.REGRESSION, ExecutionType.SMOKE })
+	@Epic(value = "AZ003")
+	@Description("Search Product in Amazon3")
+	@Story("Search product")
+	@Feature("Broken")
+	@Severity(SeverityLevel.CRITICAL)
+	public void searchProduct_3rd() throws InterruptedException {
+		//homePage.selectSubcategory("Broken",Wait.CLICKABLE,"Clicked on Broken");
+		amazonHomePage.searchProduct(Wait.PRESENCE, "iPhone 14", "Search Iphone 14");
+		productSearchResult.productDisplaySort(Wait.PRESENCE, "High to Low");
+		productSearchResult.validateProductResultSorting(Wait.NONE, "iPhone 14");
+		
+	}
 
 }

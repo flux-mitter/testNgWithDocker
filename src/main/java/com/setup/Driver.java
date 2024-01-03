@@ -78,8 +78,8 @@ public final class Driver {
 			ChromeOptions options = new ChromeOptions();
 //			options.setBrowserVersion("114.0.5735.198");
 			options.addArguments("--remote-allow-origins=*");
-			String os=System.getProperty("os.name");
-			if((!os.contains("mac"))||(!os.contains("window")))
+			String os=System.getProperty("os.name").toLowerCase();
+			if(!(os.contains("mac")))
 			{
 				options.addArguments("--no-sandbox");
 				options.addArguments("--disable-dev-shm-usage");

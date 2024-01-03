@@ -35,9 +35,6 @@ jobs:
       - uses: browser-actions/setup-chrome@latest
       - run: chrome --version
 
-      - name: checkout
-        uses: actions/checkout@v2
-
       - name: Run the maven tests
         run:
           mvn clean test -DBrowser=${{ github.event.inputs.browser }}

@@ -29,14 +29,25 @@ public class BaseTest {
 	AirAvailability airAvailability;
 	AmazonHomePage amazonHomePage;
 	ProductSearchResult productSearchResult;
-	
+
+	public BaseTest() {
+		super();
+	}
+
 	@BeforeMethod
 	@Parameters({"BROWSER","BROWSERVERSION"})
 	public void setUp(String browser, String browserVersion)
 	{
 		//DriverManager.setDriver(PropertiesUtils.get(ConfigEnum.BROWSER), PropertiesUtils.get(ConfigEnum.BROWSERVERSION));
 		//DriverManager.setDriver(browser,browserVersion);
-		DriverManager.setDriver(System.getProperty("browserName"),browserVersion);
+		if(Objects.isNull(System.getProperty("browserName")))
+		{
+			DriverManager.setDriver(browser,browserVersion);
+		}
+		else
+		{
+			DriverManager.setDriver(System.getProperty("browserName"), browserVersion);
+		}
 		if(Objects.isNull(homePage))
 		{
 		homePage=new HomePage();

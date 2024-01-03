@@ -35,7 +35,8 @@ public class BaseTest {
 	public void setUp(String browser, String browserVersion)
 	{
 		//DriverManager.setDriver(PropertiesUtils.get(ConfigEnum.BROWSER), PropertiesUtils.get(ConfigEnum.BROWSERVERSION));
-		DriverManager.setDriver(browser,browserVersion);
+		//DriverManager.setDriver(browser,browserVersion);
+		DriverManager.setDriver(System.getProperty("browserName"),browserVersion);
 		if(Objects.isNull(homePage))
 		{
 		homePage=new HomePage();

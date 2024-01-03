@@ -1,0 +1,2 @@
+mvn clean test -DBrowser="firefox"
+ mvn clean test -DBrowser=firefox

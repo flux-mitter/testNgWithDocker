@@ -1,2 +1,3 @@
 mvn clean test -DBrowser="firefox"
  mvn clean test -DBrowser=firefox
+mvn clean test -DBrowser=${{ github.event.inputs.browser }}

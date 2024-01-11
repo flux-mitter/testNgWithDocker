@@ -37,7 +37,8 @@ public final class ExtentReport {
 			extent.flush();
 		}
 		try {
-			Desktop.getDesktop().browse(new File(Contstants.getExtentreportfiletpath()).toURI());
+		//	Launch Extent report after launch. Disabling it as not supported in github actions
+		//	Desktop.getDesktop().browse(new File(Contstants.getExtentreportfiletpath()).toURI());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

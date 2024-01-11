@@ -28,11 +28,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
         
-    - name: setup-xvfb
-      uses: coactions/setup-xvfb@v1.0.1
-      with:
-          run: npm test
-          working-directory: ./ #optional
+    - name: gabrielbb/xvfb-action
+      uses: GabrielBB/xvfb-action@v1.6
+            
             
         
     - uses: browser-actions/setup-chrome@latest

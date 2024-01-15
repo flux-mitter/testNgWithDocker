@@ -32,17 +32,17 @@ public final class ExtentReport {
 		}
 	}
 
-//	public static void flushReports() {
-//		if (Objects.nonNull(extent)) {
-//			extent.flush();
-//		}
+	public static void flushReports() {
+		if (Objects.nonNull(extent)) {
+			extent.flush();
+		}
 //		try {
 //			Desktop.getDesktop().browse(new File(Contstants.getExtentreportfiletpath()).toURI());
 //		} catch (IOException e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-//	}
+	}
 
 	public static void createTest(String testCaseName) {
 		ExtentTest test = extent.createTest(testCaseName);

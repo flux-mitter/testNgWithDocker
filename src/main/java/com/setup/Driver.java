@@ -78,6 +78,7 @@ public final class Driver {
 			ChromeOptions options = new ChromeOptions();
 //			options.setBrowserVersion("114.0.5735.198");
 			options.addArguments("--remote-allow-origins=*");
+
 			String os=System.getProperty("os.name").toLowerCase();
 			if(!(os.contains("mac")))
 			{
@@ -89,7 +90,9 @@ public final class Driver {
 			//options.addArguments("−−incognito");
 //			options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities cap = new DesiredCapabilities();
+
 			cap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+			cap.setCapability(ChromeOptions.CAPABILITY,options);
 			options.merge(cap);
 			// cap.setCapability(ChromeOptions.CAPABILITY, options);
 			driver = new ChromeDriver(options);

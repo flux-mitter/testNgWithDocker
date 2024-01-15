@@ -24,39 +24,27 @@ import com.setup.DriverManager;
 
 @Listeners({com.report.runConfig.AllureTestListener.class})
 public class BaseTest {
-	
+
 	HomePage homePage;
 	AirAvailability airAvailability;
 	AmazonHomePage amazonHomePage;
 	ProductSearchResult productSearchResult;
-
-	public BaseTest() {
-		super();
-	}
 
 	@BeforeMethod
 	@Parameters({"BROWSER","BROWSERVERSION"})
 	public void setUp(String browser, String browserVersion)
 	{
 		//DriverManager.setDriver(PropertiesUtils.get(ConfigEnum.BROWSER), PropertiesUtils.get(ConfigEnum.BROWSERVERSION));
-		//DriverManager.setDriver(browser,browserVersion);
-		if(Objects.isNull(System.getProperty("browserName")))
-		{
-			DriverManager.setDriver(browser,browserVersion);
-		}
-		else
-		{
-			DriverManager.setDriver(System.getProperty("browserName"), browserVersion);
-		}
+		DriverManager.setDriver(browser,browserVersion);
 		if(Objects.isNull(homePage))
 		{
-		homePage=new HomePage();
-		airAvailability = new AirAvailability();
-		amazonHomePage=new AmazonHomePage(); 
-		productSearchResult = new ProductSearchResult();
-		
+			homePage=new HomePage();
+			airAvailability = new AirAvailability();
+			amazonHomePage=new AmazonHomePage();
+			productSearchResult = new ProductSearchResult();
+
 		}
-		
+
 	}
 //	@Parameters({"BROWSER","BROWSERVERSION"})
 //	@BeforeTest
@@ -64,14 +52,14 @@ public class BaseTest {
 //	{
 //		ExtentLogger.pass("Application launched with : "+browser+" and url :"+ConfigEnum.URL ,true);
 //	}
-	
-@AfterMethod
+
+	@AfterMethod
 	protected void tearDown() {
 		DriverManager.quitDriver();
 		homePage=null;
 		airAvailability=null;
 	}
-	
+
 //	@AfterSuite
 //	public void displayOutput() throws IOException
 //	{

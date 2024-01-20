@@ -1,4 +1,4 @@
-name: Allure Report Generation 3
+name: Allure Report Generation 4
 
 on:
   push:

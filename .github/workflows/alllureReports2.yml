@@ -43,7 +43,7 @@ jobs:
           path: gh-pages # Set the destination path for Allure history
 
       - name: Allure report action # Step to generate Allure report
-        uses: simple-elf/allure-report-action@master
+        uses: simple-elf/allure-report-action@main
         if: always() # Execute even if previous steps fail
         with:
           allure_results: ${{ vars.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results

@@ -163,8 +163,8 @@ public class ValidationEpic1 extends BaseTest {
 	public void searchProduct_3rd() throws InterruptedException {
 		//homePage.selectSubcategory("Broken",Wait.CLICKABLE,"Clicked on Broken");
 		amazonHomePage.searchProduct(Wait.PRESENCE, "iPhone 14", "Search Iphone 14");
-		//productSearchResult.productDisplaySort(Wait.PRESENCE, "High to Low");
-		//productSearchResult.validateProductResultSorting(Wait.NONE, "iPhone 14");
+		productSearchResult.productDisplaySort(Wait.PRESENCE, "High to Low");
+		productSearchResult.validateProductResultSorting(Wait.NONE, "iPhone 14");
 		
 	}
 

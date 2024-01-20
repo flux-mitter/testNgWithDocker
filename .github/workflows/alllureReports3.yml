@@ -47,7 +47,7 @@ jobs:
         if: always() # Execute even if previous steps fail
         id: allure-report
         with:
-          allure_results: build/allure-results # Specify the directory containing Allure results
+          allure_results: allure-results # Specify the directory containing Allure results
           allure_history: allure-history # Specify the directory to store Allure history
           allure_report: allure-report
           keep_reports: 10 # Specify the number of previous reports to keep

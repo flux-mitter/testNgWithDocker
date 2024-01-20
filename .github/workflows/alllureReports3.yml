@@ -47,8 +47,9 @@ jobs:
         if: always() # Execute even if previous steps fail
         id: allure-report
         with:
-          allure_results: allure-results # Specify the directory containing Allure results
+          allure_results: ${{ vars.ALLURE_RESULTS_PATH }} # Specify the directory containing Allure results
           allure_history: allure-history # Specify the directory to store Allure history
+          allure_report: allure-report
           keep_reports: 5 # Specify the number of previous reports to keep
 
       - name: Deploy Allure report to GitHub Pages # Step to deploy Allure report to GitHub Pages

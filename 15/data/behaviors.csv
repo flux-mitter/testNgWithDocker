@@ -1,0 +1,6 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"0","TV001","0","Broken","0","0","verify main page links","7"
+"0","TV0012","0","Broken","0","0","verify main page links","1"
+"0","AZ002","0","Broken","0","0","Search product","1"
+"0","AZ001","0","Broken","0","0","Search product","1"
+"0","AZ003","0","Broken","1","0","Search product","0"
